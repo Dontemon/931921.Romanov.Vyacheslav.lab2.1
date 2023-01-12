@@ -1,0 +1,22 @@
+﻿
+<div class="text">
+    <h1class="subMane">PassUsingViewBag </h1>
+    <b> Rand Value First: @ViewBag.PUM.first</b><br>
+    <b> Rand Value Second: @ViewBag.PUM.second</b><br>
+    <b> Add: </b><br>
+    <div>@ViewBag.PUM.first + @ViewBag.PUM.second = @ViewBag.PUM.sumResult</div>
+    <b> Sub: </b><br>
+    <div>@ViewBag.PUM.first - @ViewBag.PUM.second = @ViewBag.PUM.minesResult</div>
+    <b> Mult: </b><br>
+    <div>@ViewBag.PUM.first * @ViewBag.PUM.second = @ViewBag.PUM.multResult</div>
+    <b> Div: </b><br>
+    @if (ViewBag.PUM.divNull)
+    {
+        <div>Error. Second = 0 </div>
+    }
+    else
+    {
+        <div>@ViewBag.PUM.first / @ViewBag.PUM.second = @ViewBag.PUM.divResult</div>
+    }
+
+</div>

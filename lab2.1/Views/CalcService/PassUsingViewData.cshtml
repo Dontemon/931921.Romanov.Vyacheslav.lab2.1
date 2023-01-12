@@ -1,0 +1,25 @@
+﻿@using lab2._1.Models
+@{
+    var PUM = ViewData["PUM"] as CalcModel;
+}
+
+<div class="text">
+    <h1 class="subMane">PassUsingViewData </h1>
+    <b> Rand Value First: @PUM.first</b><br>
+    <b> Rand Value Second: @PUM.second</b><br>
+    <b> Add: </b><br>
+    <div>@PUM.first + @PUM.second = @PUM.sumResult</div>
+    <b> Sub: </b><br>
+    <div>@PUM.first - @PUM.second = @PUM.minesResult</div>
+    <b> Mult: </b><br>
+    <div>@PUM.first * @PUM.second = @PUM.multResult</div>
+    <b> Div: </b><br>
+    @if (PUM.divNull)
+    {
+        <div>Error. Second = 0 </div>
+    }
+    else
+    {
+        <div>@PUM.first / @PUM.second = @PUM.divResult</div>
+    }
+</div>

@@ -1,0 +1,24 @@
+﻿@using lab2._1.Models
+@model CalcModel
+
+<div class="text">
+    <h1 class="subMane">PassUsingModel </h1>
+    <b> Rand Value First: @Model.first</b><br>
+    <b> Rand Value Second: @Model.second</b><br>
+    <b> Add: </b><br>
+    <div>@Model.first + @Model.second = @Model.sumResult</div>
+    <b> Sub: </b><br>
+    <div>@Model.first - @Model.second = @Model.minesResult</div>
+    <b> Mult: </b><br>
+    <div>@Model.first * @Model.second = @Model.multResult</div>
+    <b> Div: </b><br>
+    @if (Model.divNull)
+    {
+        <div>Error. Second = 0 </div>
+    }
+    else
+    {
+        <div>@Model.first / @Model.second = @Model.divResult</div>
+    }
+
+</div>
